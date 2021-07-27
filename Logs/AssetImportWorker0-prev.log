@@ -1,0 +1,479 @@
+Using pre-set license
+Built from '2020.3/release' branch; Version is '2020.3.12f1 (b3b2c6512326) revision 11776710'; Using compiler version '192528614'; Build Type 'Release'
+OS: 'Windows 10 Home; OS build 19043.1110; Version 2009; 64bit' Language: 'it' Physical Memory: 6082 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
+
+ COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\2020.3.12f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker0
+-projectPath
+C:/Users/alvif/Documents/Projects/Unity/Briscola
+-logFile
+Logs/AssetImportWorker0.log
+-srvPort
+51845
+Successfully changed project path to: C:/Users/alvif/Documents/Projects/Unity/Briscola
+C:/Users/alvif/Documents/Projects/Unity/Briscola
+Using Asset Import Pipeline V2.
+Refreshing native plugins compatible for Editor in 73.85 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2020.3.12f1 (b3b2c6512326)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.3.12f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/alvif/Documents/Projects/Unity/Briscola/Assets
+GfxDevice: creating device client; threaded=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: AMD Radeon(TM) Vega 3 Graphics (ID=0x15d8)
+    Vendor:   
+    VRAM:     3041 MB
+    Driver:   27.20.1028.1
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.3.12f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.3.12f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.3.12f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56220
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.12f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.005914 seconds.
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 66.36 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  3.587 seconds
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.014941 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 59.13 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.803 seconds
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.08 seconds
+Refreshing native plugins compatible for Editor in 0.55 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2080 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 92.8 MB.
+System memory in use after: 92.8 MB.
+
+Unloading 33 unused Assets to reduce memory usage. Loaded Objects now: 2513.
+Total: 5.535300 ms (FindLiveObjects: 0.465600 ms CreateObjectMapping: 0.126400 ms MarkObjects: 4.500000 ms  DeleteObjects: 0.441100 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  path: Assets/Textures
+  artifactKey: Guid(25659086b10564e458586b5aa64fba44) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures using Guid(25659086b10564e458586b5aa64fba44) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8799287061e6a1c0483eeed80d58adc6') in 0.009278 seconds 
+  Import took 0.014258 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 8.961666 seconds.
+  path: Assets/Textures/86.jpg
+  artifactKey: Guid(dff035c550fb0cd4d8b801dae8401c7b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/86.jpg using Guid(dff035c550fb0cd4d8b801dae8401c7b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4b0fdf161d8fb5029a3aa957f5bfc001') in 0.180859 seconds 
+  Import took 0.185834 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 9.041264 seconds.
+  path: Assets/Textures/Wood.jpg
+  artifactKey: Guid(dff035c550fb0cd4d8b801dae8401c7b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/Wood.jpg using Guid(dff035c550fb0cd4d8b801dae8401c7b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b409959743c86b9c2b37a1ac5cb3422a') in 0.019908 seconds 
+  Import took 0.025059 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 650.818422 seconds.
+  path: Assets/Materials/Wood.mat
+  artifactKey: Guid(a94fbd22f17230342bcf730da48d1f57) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Wood.mat using Guid(a94fbd22f17230342bcf730da48d1f57) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5f72040ae349d5d74fca0a9bfed17f41') in 0.141103 seconds 
+  Import took 0.150317 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.003050 seconds.
+  path: Assets/Materials/Wood.mat
+  artifactKey: Guid(a94fbd22f17230342bcf730da48d1f57) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Wood.mat using Guid(a94fbd22f17230342bcf730da48d1f57) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5f72040ae349d5d74fca0a9bfed17f41') in 0.037501 seconds 
+  Import took 0.046367 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 303.440481 seconds.
+  path: Assets/Textures/cut.jpg
+  artifactKey: Guid(3423fafd903596448886a018bd457722) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/cut.jpg using Guid(3423fafd903596448886a018bd457722) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3b571d7c4cd800bf0189f06ba5608604') in 0.040659 seconds 
+  Import took 0.053495 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 8.347125 seconds.
+  path: Assets/Textures/Background.jpg
+  artifactKey: Guid(3423fafd903596448886a018bd457722) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/Background.jpg using Guid(3423fafd903596448886a018bd457722) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '99d3e389879f84a376380ae70b4bd977') in 0.029449 seconds 
+  Import took 0.036803 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 626.044321 seconds.
+  path: Assets
+  artifactKey: Guid(00000000000000001000000000000000) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets using Guid(00000000000000001000000000000000) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '42d402b061de3733987d63b9cc3b64de') in 0.011407 seconds 
+  Import took 0.026704 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 12.196909 seconds.
+  path: Assets/Textures/Cards
+  artifactKey: Guid(288c262e9696003459f5946c3f7dea64) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/Cards using Guid(288c262e9696003459f5946c3f7dea64) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'baa72dc08d262c5c183815245b6f1911') in 0.008076 seconds 
+  Import took 0.016983 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 21.664063 seconds.
+  path: Assets/Textures/Cards/Napoletane
+  artifactKey: Guid(e12e560901249244481734b33c2afcc2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/Cards/Napoletane using Guid(e12e560901249244481734b33c2afcc2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '714bad9b234d43800b4691b4ceb99c77') in 0.015003 seconds 
+  Import took 0.053320 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.030905 seconds.
+  path: Assets/Textures/Cards/Napoletane/Bastoni 1.png
+  artifactKey: Guid(3fae108c62fa8d04381358350f7d4eb0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/Cards/Napoletane/Bastoni 1.png using Guid(3fae108c62fa8d04381358350f7d4eb0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bb4e6a335b62a1181e5b41bdc448a88b') in 0.050521 seconds 
+  Import took 0.059207 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000743 seconds.
+  path: Assets/Textures/Cards/Napoletane/Spade 6.png
+  artifactKey: Guid(9cb22541ad995a047baa6e252e3e4014) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/Cards/Napoletane/Spade 6.png using Guid(9cb22541ad995a047baa6e252e3e4014) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '564df5f2f057758ec3cfa163120b093c') in 0.038172 seconds 
+  Import took 0.050669 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000484 seconds.
+  path: Assets/Textures/Cards/Napoletane/Denari 4.png
+  artifactKey: Guid(b0c06aca9f1ecd8428574ed8e7cba7f2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/Cards/Napoletane/Denari 4.png using Guid(b0c06aca9f1ecd8428574ed8e7cba7f2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fcb79eff2c2367d754508fd062fa5656') in 0.035990 seconds 
+  Import took 0.045338 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000554 seconds.
+  path: Assets/Textures/Cards/Napoletane/Coppe 1.png
+  artifactKey: Guid(f3dede2e323c5354baf43b0487d165fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/Cards/Napoletane/Coppe 1.png using Guid(f3dede2e323c5354baf43b0487d165fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f4bf55e782f13babbe9b5cc94ac82891') in 0.038407 seconds 
+  Import took 0.048537 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000471 seconds.
+  path: Assets/Textures/Cards/Napoletane/Denari 3.png
+  artifactKey: Guid(b212e40191ff31f48b00942346099a1f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/Cards/Napoletane/Denari 3.png using Guid(b212e40191ff31f48b00942346099a1f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e9e32430b071616f7c8b2f7bfc2a3ea6') in 0.035393 seconds 
+  Import took 0.047252 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000428 seconds.
+  path: Assets/Textures/Cards/Napoletane/Bastoni 9.png
+  artifactKey: Guid(e9165af7ed0b9784b99b1740be529ee8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/Cards/Napoletane/Bastoni 9.png using Guid(e9165af7ed0b9784b99b1740be529ee8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '72c475fa7ad35614c8703716e20e10ec') in 0.038405 seconds 
+  Import took 0.049411 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000450 seconds.
+  path: Assets/Textures/Cards/Napoletane/Denari 8.png
+  artifactKey: Guid(046959478eee45743a6f4fbbfc86e856) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/Cards/Napoletane/Denari 8.png using Guid(046959478eee45743a6f4fbbfc86e856) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ba6c5157dbaa158901f16eb75f194d6e') in 0.039889 seconds 
+  Import took 0.052348 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000449 seconds.
+  path: Assets/Textures/Cards/Napoletane/Bastoni 8.png
+  artifactKey: Guid(2c8b6145af4b4fa4e80ec3d06d811252) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/Cards/Napoletane/Bastoni 8.png using Guid(2c8b6145af4b4fa4e80ec3d06d811252) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'afb9c09c1d34f7caf7086ea35278be7b') in 0.043927 seconds 
+  Import took 0.054047 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000515 seconds.
+  path: Assets/Textures/Cards/Napoletane/Coppe 8.png
+  artifactKey: Guid(5934a29e8e7546a41aad16ec1235ebb0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/Cards/Napoletane/Coppe 8.png using Guid(5934a29e8e7546a41aad16ec1235ebb0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c8d0d73f7e36d572586cb8c7d7bbcd3e') in 0.036813 seconds 
+  Import took 0.051236 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000864 seconds.
+  path: Assets/Textures/Cards/Napoletane/Coppe 10.png
+  artifactKey: Guid(c3e548f34b1310347a472c0a2878d691) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/Cards/Napoletane/Coppe 10.png using Guid(c3e548f34b1310347a472c0a2878d691) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '86875f0d9f8dc0fabe79eb1555790a59') in 0.043158 seconds 
+  Import took 0.052580 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000592 seconds.
+  path: Assets/Textures/Cards/Napoletane/Coppe 2.png
+  artifactKey: Guid(8ae1589f8e78df748b3ac486d3b9468f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/Cards/Napoletane/Coppe 2.png using Guid(8ae1589f8e78df748b3ac486d3b9468f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '42a961f5ac8eaa5a92774b17350094e3') in 0.043623 seconds 
+  Import took 0.054085 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000504 seconds.
+  path: Assets/Textures/Cards/Napoletane/Spade 4.png
+  artifactKey: Guid(90030c07423522246b7b6a415c3961c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/Cards/Napoletane/Spade 4.png using Guid(90030c07423522246b7b6a415c3961c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '88bf456ee8ce8d0c475bb2606b6d15a6') in 0.036653 seconds 
+  Import took 0.049228 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000472 seconds.
+  path: Assets/Textures/Cards/Napoletane/Coppe 9.png
+  artifactKey: Guid(d445ac33631fb354985c82275e1ffef1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/Cards/Napoletane/Coppe 9.png using Guid(d445ac33631fb354985c82275e1ffef1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a742cc97092d93c363320f6105cb23ef') in 0.039976 seconds 
+  Import took 0.050805 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000679 seconds.
+  path: Assets/Textures/Cards/Napoletane/Denari 1.png
+  artifactKey: Guid(c2becdc60b657ed4ca506671e6773906) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/Cards/Napoletane/Denari 1.png using Guid(c2becdc60b657ed4ca506671e6773906) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ec689543f82088cdc8a5f21e6f4c2507') in 0.044868 seconds 
+  Import took 0.055395 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000444 seconds.
+  path: Assets/Textures/Cards/Napoletane/Bastoni 7.png
+  artifactKey: Guid(50d4139914f98a24c880ebb1c4990135) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/Cards/Napoletane/Bastoni 7.png using Guid(50d4139914f98a24c880ebb1c4990135) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b03fa990f82880d3e2ce476be29cb26b') in 0.037536 seconds 
+  Import took 0.049302 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000505 seconds.
+  path: Assets/Textures/Cards/Napoletane/Coppe 6.png
+  artifactKey: Guid(9222b2f4cd73f4e4dae33acca1a54cf0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/Cards/Napoletane/Coppe 6.png using Guid(9222b2f4cd73f4e4dae33acca1a54cf0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '820854500bae1ee33abe412506b3180f') in 0.044032 seconds 
+  Import took 0.054823 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000478 seconds.
+  path: Assets/Textures/Cards/Napoletane/Coppe 7.png
+  artifactKey: Guid(b1e418fee13d2d345a7818e5e86d4697) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/Cards/Napoletane/Coppe 7.png using Guid(b1e418fee13d2d345a7818e5e86d4697) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e1dbe85f2aaea5d42aa90adf08f08d56') in 0.046056 seconds 
+  Import took 0.056849 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000409 seconds.
+  path: Assets/Textures/Cards/Napoletane/Spade 7.png
+  artifactKey: Guid(7271d044bff8ef94b8428ef0138fd23d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/Cards/Napoletane/Spade 7.png using Guid(7271d044bff8ef94b8428ef0138fd23d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a11b0a28403bdec8d33ed3497ee6befd') in 0.035165 seconds 
+  Import took 0.045811 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.001457 seconds.
+  path: Assets/Textures/Cards/Napoletane/Denari 10.png
+  artifactKey: Guid(8ca3d6f1bd4aa3e4e90f123ccf09a5f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/Cards/Napoletane/Denari 10.png using Guid(8ca3d6f1bd4aa3e4e90f123ccf09a5f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '47575ac1b0e2b98c439f6c63e2d15f74') in 0.036513 seconds 
+  Import took 0.046354 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000544 seconds.
+  path: Assets/Textures/Cards/Napoletane/Spade 9.png
+  artifactKey: Guid(29391a2877494484ebdf085c5ae78c92) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/Cards/Napoletane/Spade 9.png using Guid(29391a2877494484ebdf085c5ae78c92) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '97fe7361a5ecbad72d85bfa2a0aa43e4') in 0.038477 seconds 
+  Import took 0.049918 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000820 seconds.
+  path: Assets/Textures/Cards/Napoletane/Spade 2.png
+  artifactKey: Guid(70e0bd8175ab2d6498f8a3dfb6f94b6b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/Cards/Napoletane/Spade 2.png using Guid(70e0bd8175ab2d6498f8a3dfb6f94b6b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cb06b8ce31c61ab9e865cd6d551d5a45') in 0.041763 seconds 
+  Import took 0.052622 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000728 seconds.
+  path: Assets/Textures/Cards/Napoletane/Coppe 3.png
+  artifactKey: Guid(633483306a99f6b4089d36b6a4b17b39) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/Cards/Napoletane/Coppe 3.png using Guid(633483306a99f6b4089d36b6a4b17b39) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7e6366c5a9d465a3c261784a46da0c4f') in 0.048784 seconds 
+  Import took 0.058696 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000645 seconds.
+  path: Assets/Textures/Cards/Napoletane/Spade 10.png
+  artifactKey: Guid(4f870a50b6d4fa64698101edab50d9ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/Cards/Napoletane/Spade 10.png using Guid(4f870a50b6d4fa64698101edab50d9ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8b07a2dcfba0aeff9ff1cd64d5197257') in 0.034896 seconds 
+  Import took 0.045132 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000462 seconds.
+  path: Assets/Textures/Cards/Napoletane/Spade 5.png
+  artifactKey: Guid(bde71b773faa3ec42acd59f7cde70e0f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/Cards/Napoletane/Spade 5.png using Guid(bde71b773faa3ec42acd59f7cde70e0f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '208cdb8b3f2f94b6cbaae89ccd9c1b28') in 0.041700 seconds 
+  Import took 0.121003 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000549 seconds.
+  path: Assets/Textures/Cards/Napoletane/Bastoni 6.png
+  artifactKey: Guid(d5e7d3081ae2dd843951a270d193804d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/Cards/Napoletane/Bastoni 6.png using Guid(d5e7d3081ae2dd843951a270d193804d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7dcefa75abffad633584f56396150e48') in 0.044027 seconds 
+  Import took 0.055340 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000531 seconds.
+  path: Assets/Textures/Cards/Napoletane/Coppe 5.png
+  artifactKey: Guid(822e6b0837f2160439823a34c9d56750) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/Cards/Napoletane/Coppe 5.png using Guid(822e6b0837f2160439823a34c9d56750) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f0dc89c15aa78e059a1dc8904e9c600d') in 0.042590 seconds 
+  Import took 0.054349 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000478 seconds.
+  path: Assets/Textures/Cards/Napoletane/Bastoni 10.png
+  artifactKey: Guid(3b9592ef4870ef8499331ebfdf5ff8ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/Cards/Napoletane/Bastoni 10.png using Guid(3b9592ef4870ef8499331ebfdf5ff8ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b6cec4459a64978e714608453bf71d15') in 0.036195 seconds 
+  Import took 0.045038 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000486 seconds.
+  path: Assets/Textures/Cards/Napoletane/Bastoni 4.png
+  artifactKey: Guid(23d28ef2a914c8447b25536ebb274189) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/Cards/Napoletane/Bastoni 4.png using Guid(23d28ef2a914c8447b25536ebb274189) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f667ddf057ceca3643db18f284e9217b') in 0.035432 seconds 
+  Import took 0.045541 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000677 seconds.
+  path: Assets/Textures/Cards/Napoletane/Bastoni 5.png
+  artifactKey: Guid(52196d396f872e742aa17698ab6297c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/Cards/Napoletane/Bastoni 5.png using Guid(52196d396f872e742aa17698ab6297c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ce0db3bfef273f74b9a46e8df2af29c7') in 0.038555 seconds 
+  Import took 0.051967 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000446 seconds.
+  path: Assets/Textures/Cards/Napoletane/Denari 7.png
+  artifactKey: Guid(ec84e164c878dfa45956150ea69ce062) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/Cards/Napoletane/Denari 7.png using Guid(ec84e164c878dfa45956150ea69ce062) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '151be4214b3381a02cf266f8d02bd6be') in 0.039523 seconds 
+  Import took 0.049457 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000442 seconds.
+  path: Assets/Textures/Cards/Napoletane/Spade 8.png
+  artifactKey: Guid(535595c0129e548408694ee565d1bf2a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/Cards/Napoletane/Spade 8.png using Guid(535595c0129e548408694ee565d1bf2a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7dc8ceecb27a09d96182e59b05032b15') in 0.036487 seconds 
+  Import took 0.048285 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000527 seconds.
+  path: Assets/Textures/Cards/Napoletane/Denari 5.png
+  artifactKey: Guid(226c99841f9b215429dbdabdb21a6fb6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/Cards/Napoletane/Denari 5.png using Guid(226c99841f9b215429dbdabdb21a6fb6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd0af56ce40b0cad5138001cd40cf2c97') in 0.042620 seconds 
+  Import took 0.053743 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000486 seconds.
+  path: Assets/Textures/Cards/Napoletane/Spade 3.png
+  artifactKey: Guid(da8e714706b1bea42ad99b3c5a1f290c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/Cards/Napoletane/Spade 3.png using Guid(da8e714706b1bea42ad99b3c5a1f290c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4dfbbbe126b1017ca58acb650165fb14') in 0.030995 seconds 
+  Import took 0.039869 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000435 seconds.
+  path: Assets/Textures/Cards/Napoletane/Bastoni 2.png
+  artifactKey: Guid(7b85731119c1dc549a146fd84719b8f4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/Cards/Napoletane/Bastoni 2.png using Guid(7b85731119c1dc549a146fd84719b8f4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a3812d00b5138fe46de52233fd3af03e') in 0.038393 seconds 
+  Import took 0.047546 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000532 seconds.
+  path: Assets/Textures/Cards/Napoletane/Spade 1.png
+  artifactKey: Guid(18d5f10c97f03f846857f3f41a7f392a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/Cards/Napoletane/Spade 1.png using Guid(18d5f10c97f03f846857f3f41a7f392a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c3f750dc042e9ab093b59e00e4c88f00') in 0.036949 seconds 
+  Import took 0.050005 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000510 seconds.
+  path: Assets/Textures/Cards/Napoletane/Bastoni 3.png
+  artifactKey: Guid(0e72426292fe69b44adb2493bd1f384e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/Cards/Napoletane/Bastoni 3.png using Guid(0e72426292fe69b44adb2493bd1f384e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '828a5b5c0d03574402b45ae0bec25920') in 0.043545 seconds 
+  Import took 0.055174 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000542 seconds.
+  path: Assets/Textures/Cards/Napoletane/Denari 2.png
+  artifactKey: Guid(4833146cb875578468f8a7d9568f6a0f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/Cards/Napoletane/Denari 2.png using Guid(4833146cb875578468f8a7d9568f6a0f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2539a3c03d7fe5398173c8eb0ba58d56') in 0.035457 seconds 
+  Import took 0.047229 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000411 seconds.
+  path: Assets/Textures/Cards/Napoletane/Denari 6.png
+  artifactKey: Guid(7a8dd39e06239c8418d154860843b313) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/Cards/Napoletane/Denari 6.png using Guid(7a8dd39e06239c8418d154860843b313) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a9c7fd8659f55c5e55146507445e470d') in 0.036825 seconds 
+  Import took 0.047858 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000513 seconds.
+  path: Assets/Textures/Cards/Napoletane/Coppe 4.png
+  artifactKey: Guid(a6cf7e64112d2314a8338a6982936d86) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/Cards/Napoletane/Coppe 4.png using Guid(a6cf7e64112d2314a8338a6982936d86) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e1687a92fdbbf5174d4cc6409b1a2c5a') in 0.043608 seconds 
+  Import took 0.054780 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000528 seconds.
+  path: Assets/Textures/Cards/Napoletane/Denari 9.png
+  artifactKey: Guid(486f02751b44a2e4893992ba61a03d4b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/Cards/Napoletane/Denari 9.png using Guid(486f02751b44a2e4893992ba61a03d4b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9e3c73e769f40ec80ecc9a8a8d7a2b2c') in 0.045448 seconds 
+  Import took 0.055802 seconds .
+
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file

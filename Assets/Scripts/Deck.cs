@@ -5,14 +5,17 @@ namespace com.alvisefavero.briscola
 {
     public class Deck : MonoBehaviour
     {
-        private Stack<Card> cards;
+        public string CardsPath = "Cards";
+        private Stack<CardAsset> cards;
 
-        public Deck()
+        private void Awake()
         {
-            
+            cards = new Stack<CardAsset>();
+            CardAsset[] cardsArray = Resources.LoadAll<CardAsset>(CardsPath);
+            foreach (CardAsset card in cardsArray) cards.Push(card);
         }
 
-        public static void GetRandomDeck()
+        public void Shuffle()
         {
             // TODO
         }

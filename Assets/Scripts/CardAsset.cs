@@ -7,7 +7,6 @@ namespace com.alvisefavero.briscola
     {
         [SerializeField] private Suit _suit;
         [SerializeField][Range(1, 10)] private int _value;
-        [SerializeField] private Sprite _image;
         [SerializeField] private string _cardName;
         
         public Suit Suit
@@ -23,14 +22,6 @@ namespace com.alvisefavero.briscola
             get
             {
                 return _value;
-            }
-        }
-
-        public Sprite Image
-        {
-            get
-            {
-                return _image;
             }
         }
 

@@ -208,7 +208,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71c0cadb8de5a7549a42d903337df285, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  FullScale: 50
+  MaxSize: 40
   CardsPath: Cards
+  FillOnAwake: 1
+  ShuffleOnAwake: 1
 --- !u!1 &491647179 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1483776495917862771, guid: ad5ff881332d5ad4396429d9d7a6b780, type: 3}
@@ -530,12 +534,16 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2295919298565264841, guid: ad5ff881332d5ad4396429d9d7a6b780, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2295919298565264841, guid: ad5ff881332d5ad4396429d9d7a6b780, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.96
+      value: -2.34
       objectReference: {fileID: 0}
     - target: {fileID: 2295919298565264841, guid: ad5ff881332d5ad4396429d9d7a6b780, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.27
+      value: -3.25
       objectReference: {fileID: 0}
     - target: {fileID: 2295919298565264841, guid: ad5ff881332d5ad4396429d9d7a6b780, type: 3}
       propertyPath: m_LocalPosition.z

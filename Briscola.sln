@@ -1,7 +1,11 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{B40EA851-A779-EA57-2371-896F1007D8B7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Beetlecircus.SerializableDictionary", "Beetlecircus.SerializableDictionary.csproj", "{19D778A7-625A-B624-23ED-48AE12FF4F42}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Beetlecircus.SerializableDictionary.Editor", "Beetlecircus.SerializableDictionary.Editor.csproj", "{37000D01-0403-A113-66B8-58ECE1D79628}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,6 +17,14 @@ Global
 		{B40EA851-A779-EA57-2371-896F1007D8B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B40EA851-A779-EA57-2371-896F1007D8B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B40EA851-A779-EA57-2371-896F1007D8B7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{19D778A7-625A-B624-23ED-48AE12FF4F42}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19D778A7-625A-B624-23ED-48AE12FF4F42}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19D778A7-625A-B624-23ED-48AE12FF4F42}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{19D778A7-625A-B624-23ED-48AE12FF4F42}.Release|Any CPU.Build.0 = Release|Any CPU
+		{37000D01-0403-A113-66B8-58ECE1D79628}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{37000D01-0403-A113-66B8-58ECE1D79628}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{37000D01-0403-A113-66B8-58ECE1D79628}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{37000D01-0403-A113-66B8-58ECE1D79628}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

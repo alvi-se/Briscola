@@ -12,8 +12,11 @@ namespace com.alvisefavero.briscola
         public bool ShuffleOnAwake = false;
         private List<CardAsset> cards;
 
+        private MeshFilter meshFilter;
+
         private void Awake()
         {
+            meshFilter = GetComponent<MeshFilter>();
             cards = new List<CardAsset>();
             if (FillOnAwake)
             {
@@ -64,6 +67,14 @@ namespace com.alvisefavero.briscola
         public void Push(CardAsset card)
         {
             cards.Add(card);
+        }
+
+        public void OnDeckChanged()
+        {
+            if (cards.Count <= 0)
+            {
+                // Stuff
+            }
         }
     }
 }

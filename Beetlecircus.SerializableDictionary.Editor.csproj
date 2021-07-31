@@ -56,11 +56,11 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio Tools for Unity\16.0\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\SerializableDictionary\Editor\SerializedPropertyHelper.cs" />
     <Compile Include="Assets\Scripts\SerializableDictionary\Editor\SerializedPropertyExtension.cs" />
-    <Compile Include="Assets\Scripts\SerializableDictionary\Editor\CatalogDrawer.cs" />
     <Compile Include="Assets\Scripts\SerializableDictionary\Editor\EditorWithCatalogs.cs" />
     <Compile Include="Assets\Scripts\SerializableDictionary\Editor\CatalogGUI.cs" />
-    <Compile Include="Assets\Scripts\SerializableDictionary\Editor\SerializedPropertyHelper.cs" />
+    <Compile Include="Assets\Scripts\SerializableDictionary\Editor\CatalogDrawer.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Scripts\SerializableDictionary\Editor\Beetlecircus.SerializableDictionary.Editor.asmdef" />

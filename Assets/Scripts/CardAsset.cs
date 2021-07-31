@@ -6,9 +6,9 @@ namespace com.alvisefavero.briscola
     public class CardAsset : ScriptableObject
     {
         [SerializeField] private Suit _suit;
-        [SerializeField][Range(1, 10)] private int _value;
+        [SerializeField] [Range(1, 10)] private int _value;
         [SerializeField] private string _cardName;
-        
+
         public Suit Suit
         {
             get

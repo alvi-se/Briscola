@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace com.alvisefavero.briscola
 {
-    public class Deck : MonoBehaviour
+    public class Deck : MonoBehaviour, IInteractable
     {
         public float FullScale = 200f;
         [Min(0f)] public int MaxSize = 40;
@@ -13,16 +13,23 @@ namespace com.alvisefavero.briscola
         private List<CardAsset> cards;
 
         private MeshFilter meshFilter;
+        private MeshRenderer meshRenderer;
+        private SkinManager skinManager;
+        new private Collider collider;
 
         private void Awake()
         {
             meshFilter = GetComponent<MeshFilter>();
+            meshRenderer = GetComponent<MeshRenderer>();
+            collider = GetComponent<Collider>();
+            skinManager = SkinManager.Instance;
             cards = new List<CardAsset>();
             if (FillOnAwake)
             {
                 Fill();
                 if (ShuffleOnAwake) Shuffle();
             }
+            else OnDeckChanged();
         }
 
         public void Shuffle()
@@ -34,12 +41,15 @@ namespace com.alvisefavero.briscola
                 cards[i] = cards[rnd];
                 cards[rnd] = c;
             }
+            OnDeckChanged();
         }
 
         public void Fill()
         {
             CardAsset[] cardsArray = Resources.LoadAll<CardAsset>(CardsPath);
+            MaxSize = cardsArray.Length;
             foreach (CardAsset card in cardsArray) cards.Add(card);
+            OnDeckChanged();
         }
 
         public CardAsset Pop()
@@ -47,6 +57,7 @@ namespace com.alvisefavero.briscola
             if (cards.Count <= 0) throw new System.InvalidOperationException("Can't pop on empty deck.");
             CardAsset c = cards[cards.Count - 1];
             cards.RemoveAt(cards.Count - 1);
+            OnDeckChanged();
             return c;
         }
 
@@ -67,14 +78,30 @@ namespace com.alvisefavero.briscola
         public void Push(CardAsset card)
         {
             cards.Add(card);
+            OnDeckChanged();
         }
 
         public void OnDeckChanged()
         {
             if (cards.Count <= 0)
             {
-                // Stuff
+                meshFilter.mesh = null;
+                transform.localScale = new Vector3(1f, 1f, 1f);
+                collider.enabled = false;
             }
+            else
+            {
+                meshFilter.mesh = skinManager.SelectedSkin.CardModel;
+                Material[] materials = { skinManager.SelectedSkin.GetCardSkin(cards[0]), skinManager.SelectedSkin.CardBack };
+                meshRenderer.materials = materials;
+                transform.localScale = new Vector3(1f, 1f, Mathf.Lerp(1, FullScale, (float) cards.Count / MaxSize));
+                collider.enabled = true;
+            }
+        }
+
+        public void Interact()
+        {
+            Pop();
         }
     }
 }

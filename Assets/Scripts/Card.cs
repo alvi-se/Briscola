@@ -3,7 +3,7 @@ using System.Collections;
 
 namespace com.alvisefavero.briscola
 {
-    public class Card : MonoBehaviour
+    public class Card : MonoBehaviour, IInteractable
     {
         [SerializeField] private CardAsset _cardAsset;
         public CardAsset CardAsset
@@ -41,9 +41,9 @@ namespace com.alvisefavero.briscola
             Covered = CoverOnAwake;
         }
 
-        public void Play()
+        public void Interact()
         {
-            // transform.position = GameManager.Instance.player1PlayPos.position;
+            Debug.Log("INTERAGITO");
             StartCoroutine(PlayAnimation());
             Covered = false;
             Debug.Log("Giocato " + _cardAsset.CardName);

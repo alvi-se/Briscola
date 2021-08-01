@@ -5,16 +5,16 @@ namespace com.alvisefavero.briscola
     public class SkinManager : MonoBehaviour
     {
         #region singleton
-        private static SkinManager instance;
+        public static SkinManager Instance { get; private set; }
 
         private void Awake()
         {
-            if (instance != null)
+            if (Instance != null)
             {
                 Debug.LogError("More than one instance of SkinManager!");
             }
             else
-                instance = this;
+                Instance = this;
         }
         #endregion
 

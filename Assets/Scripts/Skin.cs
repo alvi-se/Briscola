@@ -1,5 +1,4 @@
 using UnityEngine;
-using Unity.Collections;
 using System;
 
 namespace com.alvisefavero.briscola
@@ -8,24 +7,31 @@ namespace com.alvisefavero.briscola
     public class Skin : ScriptableObject
     {
         [Serializable]
-        public class CardLink
+        private class CardLink
         {
             [SerializeField] private CardAsset _card;
             [SerializeField] private Material _cardFrontFace;
+            
+            public CardAsset Card
+            {
+                get
+                {
+                    return _card;
+                }
+            }
+
+            public Material CardFrontFace
+            {
+                get
+                {
+                    return _cardFrontFace;
+                }
+            }
         }
 
         [SerializeField] private Material _cardBack;
         [SerializeField] private Mesh _cardModel;
         [SerializeField] private CardLink[] _cardFronts = new CardLink[40];
-
-        private void Awake()
-        {
-            CardAsset[] cards = Resources.LoadAll<CardAsset>("Cards");
-            foreach (CardAsset c in cards)
-            {
-                // TODOs
-            }
-        }
 
         public Material CardBack
         {
@@ -45,8 +51,11 @@ namespace com.alvisefavero.briscola
 
         public Material GetCardSkin(CardAsset card)
         {
+            foreach (CardLink link in _cardFronts)
+            {
+                if (link.Card == card) return link.CardFrontFace;
+            }
             return null;
-            // TODO
         }
     }
 }

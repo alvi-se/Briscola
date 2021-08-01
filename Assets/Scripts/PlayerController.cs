@@ -12,10 +12,10 @@ namespace com.alvisefavero.briscola
                 RaycastHit hit;
                 if (Physics.Raycast(ray, out hit))
                 {
-                    Card card = hit.transform.GetComponent<Card>();
-                    if (card != null)
+                    IInteractable interactable = hit.transform.GetComponent<IInteractable>();
+                    if (interactable != null)
                     {
-                        card.Play();
+                        interactable.Interact();
                     }
                 }
             }

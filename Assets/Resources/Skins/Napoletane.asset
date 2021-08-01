@@ -10,88 +10,88 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cb5219a14b749cf44a7d43293bbbf1c3, type: 3}
-  m_Name: 
+  m_Name: Napoletane
   m_EditorClassIdentifier: 
-  _cardBack: {fileID: 0}
-  _cardModel: {fileID: 0}
+  _cardBack: {fileID: 2100000, guid: 7f212a52906cad04f91cb4e9deba56e4, type: 2}
+  _cardModel: {fileID: -462981019419857548, guid: ffa7aa4b25b96c8468508d78e3f7d383, type: 3}
   _cardFronts:
-  - _card: {fileID: 0}
-    _cardFrontFace: {fileID: 0}
-  - _card: {fileID: 0}
-    _cardFrontFace: {fileID: 0}
-  - _card: {fileID: 0}
-    _cardFrontFace: {fileID: 0}
-  - _card: {fileID: 0}
-    _cardFrontFace: {fileID: 0}
-  - _card: {fileID: 0}
-    _cardFrontFace: {fileID: 0}
-  - _card: {fileID: 0}
-    _cardFrontFace: {fileID: 0}
-  - _card: {fileID: 0}
-    _cardFrontFace: {fileID: 0}
-  - _card: {fileID: 0}
-    _cardFrontFace: {fileID: 0}
-  - _card: {fileID: 0}
-    _cardFrontFace: {fileID: 0}
-  - _card: {fileID: 0}
-    _cardFrontFace: {fileID: 0}
-  - _card: {fileID: 0}
-    _cardFrontFace: {fileID: 0}
-  - _card: {fileID: 0}
-    _cardFrontFace: {fileID: 0}
-  - _card: {fileID: 0}
-    _cardFrontFace: {fileID: 0}
-  - _card: {fileID: 0}
-    _cardFrontFace: {fileID: 0}
-  - _card: {fileID: 0}
-    _cardFrontFace: {fileID: 0}
-  - _card: {fileID: 0}
-    _cardFrontFace: {fileID: 0}
-  - _card: {fileID: 0}
-    _cardFrontFace: {fileID: 0}
-  - _card: {fileID: 0}
-    _cardFrontFace: {fileID: 0}
-  - _card: {fileID: 0}
-    _cardFrontFace: {fileID: 0}
-  - _card: {fileID: 0}
-    _cardFrontFace: {fileID: 0}
-  - _card: {fileID: 0}
-    _cardFrontFace: {fileID: 0}
-  - _card: {fileID: 0}
-    _cardFrontFace: {fileID: 0}
-  - _card: {fileID: 0}
-    _cardFrontFace: {fileID: 0}
-  - _card: {fileID: 0}
-    _cardFrontFace: {fileID: 0}
-  - _card: {fileID: 0}
-    _cardFrontFace: {fileID: 0}
-  - _card: {fileID: 0}
-    _cardFrontFace: {fileID: 0}
-  - _card: {fileID: 0}
-    _cardFrontFace: {fileID: 0}
-  - _card: {fileID: 0}
-    _cardFrontFace: {fileID: 0}
-  - _card: {fileID: 0}
-    _cardFrontFace: {fileID: 0}
-  - _card: {fileID: 0}
-    _cardFrontFace: {fileID: 0}
-  - _card: {fileID: 0}
-    _cardFrontFace: {fileID: 0}
-  - _card: {fileID: 0}
-    _cardFrontFace: {fileID: 0}
-  - _card: {fileID: 0}
-    _cardFrontFace: {fileID: 0}
-  - _card: {fileID: 0}
-    _cardFrontFace: {fileID: 0}
-  - _card: {fileID: 0}
-    _cardFrontFace: {fileID: 0}
-  - _card: {fileID: 0}
-    _cardFrontFace: {fileID: 0}
-  - _card: {fileID: 0}
-    _cardFrontFace: {fileID: 0}
-  - _card: {fileID: 0}
-    _cardFrontFace: {fileID: 0}
-  - _card: {fileID: 0}
-    _cardFrontFace: {fileID: 0}
-  - _card: {fileID: 0}
-    _cardFrontFace: {fileID: 0}
+  - _card: {fileID: 11400000, guid: 026974c2702895147a7b6383edbd54ca, type: 2}
+    _cardFrontFace: {fileID: 2100000, guid: 604859ee2eb5a5b4fb2978c75f998c08, type: 2}
+  - _card: {fileID: 11400000, guid: 0758a551c9b382d4cbbcc7d33fadf337, type: 2}
+    _cardFrontFace: {fileID: 2100000, guid: 5848358815b0551459a854552f9e057c, type: 2}
+  - _card: {fileID: 11400000, guid: e19b9cf4ff3b9e144b68e7e3f54fe00d, type: 2}
+    _cardFrontFace: {fileID: 2100000, guid: 911ca555d43c9d44d9f9085bc7c7bf0c, type: 2}
+  - _card: {fileID: 11400000, guid: ca5d0ad198e6ffb4e9a75b328b7a2b96, type: 2}
+    _cardFrontFace: {fileID: 2100000, guid: 56fc71bfcb0c5fb4f851e4079e70ffe1, type: 2}
+  - _card: {fileID: 11400000, guid: 69f06d699d411ed44b1af5ba0af5e7e5, type: 2}
+    _cardFrontFace: {fileID: 2100000, guid: 2da37adabcb0dea41970382a2d0f4e28, type: 2}
+  - _card: {fileID: 11400000, guid: 78c18e4515553834db37545adb9ae4f9, type: 2}
+    _cardFrontFace: {fileID: 2100000, guid: 510ef74c966dc5345955e2a221d0e484, type: 2}
+  - _card: {fileID: 11400000, guid: c299df72019988c4082387cf63322488, type: 2}
+    _cardFrontFace: {fileID: 2100000, guid: ae55ea7af5c6f0c42a3289a3102ed2fa, type: 2}
+  - _card: {fileID: 11400000, guid: 1000a6f2797ba1a4b84ba170dbf2423f, type: 2}
+    _cardFrontFace: {fileID: 2100000, guid: 714300518a8236a448ec81e055eb5a48, type: 2}
+  - _card: {fileID: 11400000, guid: 1cbfaff669f0afd40a1d8d41f8bee9b6, type: 2}
+    _cardFrontFace: {fileID: 2100000, guid: 872ca477fe859bb47b45f04adc708eeb, type: 2}
+  - _card: {fileID: 11400000, guid: 8877c9a47ec533047a47897c4f8d97df, type: 2}
+    _cardFrontFace: {fileID: 2100000, guid: d29801d27a54d8e40b1bd89ebf6efb7d, type: 2}
+  - _card: {fileID: 11400000, guid: 12084b61754b1c649a582b9d9f0790fd, type: 2}
+    _cardFrontFace: {fileID: 2100000, guid: d5c65a4fb5d2b774c84a2a0dc919ca96, type: 2}
+  - _card: {fileID: 11400000, guid: 7bbd04e539b32fd459a887a705bfec5e, type: 2}
+    _cardFrontFace: {fileID: 2100000, guid: 2abcc42aa8984374d8f2234a7529b1b3, type: 2}
+  - _card: {fileID: 11400000, guid: 8a77b77d09d724b4ba66933c44392b9b, type: 2}
+    _cardFrontFace: {fileID: 2100000, guid: 17bfa11d3150f1c49ab2b4cb457af52e, type: 2}
+  - _card: {fileID: 11400000, guid: 4975100c057fafa4b82cc3b5f0d1ffd1, type: 2}
+    _cardFrontFace: {fileID: 2100000, guid: e04a3016641c8d04b92873068047746e, type: 2}
+  - _card: {fileID: 11400000, guid: b70912cb1ea6188408b11dde86b6ba29, type: 2}
+    _cardFrontFace: {fileID: 2100000, guid: cc531258dffea954daac17748888a7e8, type: 2}
+  - _card: {fileID: 11400000, guid: 3b826bf7da75cca4aa04ebb7a09b8b97, type: 2}
+    _cardFrontFace: {fileID: 2100000, guid: 607e82c8f91e12f46bd8459db6d9a997, type: 2}
+  - _card: {fileID: 11400000, guid: 62f7609c954f37d4c944b7764328266e, type: 2}
+    _cardFrontFace: {fileID: 2100000, guid: 724077caf063486468b33253b5da6cdc, type: 2}
+  - _card: {fileID: 11400000, guid: fced7359bf2302a458319f7d44f08ae6, type: 2}
+    _cardFrontFace: {fileID: 2100000, guid: 1839a4474d4e49a48aee8f9f0784082d, type: 2}
+  - _card: {fileID: 11400000, guid: 9756d0569e1299b4cbdc1f812904b830, type: 2}
+    _cardFrontFace: {fileID: 2100000, guid: 3a301cd8946e4b444867b2cf36df570b, type: 2}
+  - _card: {fileID: 11400000, guid: 2910c4e1e626b5a48b547e714afe857f, type: 2}
+    _cardFrontFace: {fileID: 2100000, guid: 60f3419f97d802941adc0f5402d37a41, type: 2}
+  - _card: {fileID: 11400000, guid: cf473927e0975c74886a6081ba8baacf, type: 2}
+    _cardFrontFace: {fileID: 2100000, guid: 2d4ca47268eae9444a0ea7ff61145b81, type: 2}
+  - _card: {fileID: 11400000, guid: b2dc2f6f5cbde514da515da4ba723cfa, type: 2}
+    _cardFrontFace: {fileID: 2100000, guid: 6642a3ee5ed7f94438a058dc48e43baa, type: 2}
+  - _card: {fileID: 11400000, guid: f74a1a6599ec0ca4b9170f675df52937, type: 2}
+    _cardFrontFace: {fileID: 2100000, guid: ea18f711e983f484798835cf11ee38dd, type: 2}
+  - _card: {fileID: 11400000, guid: b51fd7cfcc1401f4280c8f42d6bbd29f, type: 2}
+    _cardFrontFace: {fileID: 2100000, guid: 354014a04dde76b4d9282c7085a9c535, type: 2}
+  - _card: {fileID: 11400000, guid: bdc9cd61bd06c0d45b04976c774c6647, type: 2}
+    _cardFrontFace: {fileID: 2100000, guid: c5adfd1001f516b48859730f0d3d5aad, type: 2}
+  - _card: {fileID: 11400000, guid: 3e6661c0331b483419d4fd4e135f77b8, type: 2}
+    _cardFrontFace: {fileID: 2100000, guid: 634b662860c134f43ba16c1945179420, type: 2}
+  - _card: {fileID: 11400000, guid: ba6c46fa361d5364f966ed1b6dd1b1ec, type: 2}
+    _cardFrontFace: {fileID: 2100000, guid: 8dd6ed58ab358e540a9dae80fd2ef309, type: 2}
+  - _card: {fileID: 11400000, guid: aa2fd1e84d7608941b6bec129e5629cd, type: 2}
+    _cardFrontFace: {fileID: 2100000, guid: 22a3d0616015bc349b4aa84f8e45bb5d, type: 2}
+  - _card: {fileID: 11400000, guid: 14c501babe61b014d905490867c3722e, type: 2}
+    _cardFrontFace: {fileID: 2100000, guid: f967710f2d0caf242ba991a849ca6843, type: 2}
+  - _card: {fileID: 11400000, guid: 5fc38aba8d994354b8a972d7d78978c0, type: 2}
+    _cardFrontFace: {fileID: 2100000, guid: 5880e9207a2cfd44e8dab144d27c12b3, type: 2}
+  - _card: {fileID: 11400000, guid: f9a422e415e76ec4e87731c52d69a66b, type: 2}
+    _cardFrontFace: {fileID: 2100000, guid: 8abe966d1de373f48ae1f72629e38373, type: 2}
+  - _card: {fileID: 11400000, guid: 18c0e44947ffa6144a0d04acf8bcebe0, type: 2}
+    _cardFrontFace: {fileID: 2100000, guid: b6cc4f24955946c4f8701c7e2ed9ecaf, type: 2}
+  - _card: {fileID: 11400000, guid: 5ce7ceff44d8d7f4ba69880642e3698c, type: 2}
+    _cardFrontFace: {fileID: 2100000, guid: 7448b86cb835f974189b05062ca74585, type: 2}
+  - _card: {fileID: 11400000, guid: a7007b650515d7740b17dcb73ba99985, type: 2}
+    _cardFrontFace: {fileID: 2100000, guid: 5398ffbe0c999b943845951c3a9b0190, type: 2}
+  - _card: {fileID: 11400000, guid: 00f8012e9d1c0b94faf088c844e78b0d, type: 2}
+    _cardFrontFace: {fileID: 2100000, guid: 5d2698adad0daf644a1bc5dbb24d3120, type: 2}
+  - _card: {fileID: 11400000, guid: ad675e72f3c8640449fd51cbb406a129, type: 2}
+    _cardFrontFace: {fileID: 2100000, guid: 3db1e2d0e8ae71b4ab6f17e26492808b, type: 2}
+  - _card: {fileID: 11400000, guid: c6f0f9d579555364bb6b58c3adc0e6c9, type: 2}
+    _cardFrontFace: {fileID: 2100000, guid: df3e0423f35baa842880b362b33d4d81, type: 2}
+  - _card: {fileID: 11400000, guid: 8a7627deea4d4e144b74d72e7b3310a3, type: 2}
+    _cardFrontFace: {fileID: 2100000, guid: 5e603ac27bec0b94d92c5025dc5bc1d1, type: 2}
+  - _card: {fileID: 11400000, guid: 41bf32f07ce049449854c9881f8c7492, type: 2}
+    _cardFrontFace: {fileID: 2100000, guid: 13c9f5556357edd41b75b69896792bdb, type: 2}
+  - _card: {fileID: 11400000, guid: 5550975c722a08e43bc6f5449d1dab4b, type: 2}
+    _cardFrontFace: {fileID: 2100000, guid: 3fc4ca1c09bb2184e8f0cc1ba10aaded, type: 2}

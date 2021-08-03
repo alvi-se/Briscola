@@ -1,5 +1,5 @@
-using UnityEngine;
 using System.Collections;
+using UnityEngine;
 
 namespace com.alvisefavero.briscola
 {
@@ -12,12 +12,17 @@ namespace com.alvisefavero.briscola
             {
                 return _cardAsset;
             }
+            // Trovare soluzione per evitare l'utilizzo del setter
+            set
+            {
+                _cardAsset = value;
+            }
         }
 
         public bool CoverOnAwake = true;
 
         private bool _covered;
-    
+
         public bool Covered
         {
             get
@@ -43,21 +48,24 @@ namespace com.alvisefavero.briscola
 
         public void Interact()
         {
-            Debug.Log("INTERAGITO");
-            StartCoroutine(PlayAnimation());
             Covered = false;
             Debug.Log("Giocato " + _cardAsset.CardName);
         }
 
-        private IEnumerator PlayAnimation()
+        public delegate void OnMovementFinished();
+
+        public void MoveCard(Vector3 position, float time, OnMovementFinished onMovementFinished = null) => StartCoroutine(_moveCard(position, time, onMovementFinished));
+
+        private IEnumerator _moveCard(Vector3 position, float time, OnMovementFinished onMovementFinished)
         {
             Vector3 startPosition = transform.position;
             float startTime = Time.time;
-            while (Time.time < startTime + PlayTimeAnimation)
+            while (Time.time < startTime + time)
             {
-                transform.position = Vector3.Lerp(startPosition, GameManager.Instance.player1PlayPos.position, (Time.time - startTime) / + PlayTimeAnimation);
+                transform.position = Vector3.Lerp(startPosition, position, (Time.time - startTime) / +PlayTimeAnimation);
                 yield return null;
             }
+            if (onMovementFinished != null) onMovementFinished.Invoke();
         }
     }
 }

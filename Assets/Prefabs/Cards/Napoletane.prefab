@@ -31,8 +31,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1790ed0cfc7f49f47990c0eed5570945, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _suit: 0
-  _value: 1
+  _cardAsset: {fileID: 0}
+  CoverOnAwake: 1
+  PlayTimeAnimation: 1
 --- !u!1001 &1753596859224371746
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -58,15 +59,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ffa7aa4b25b96c8468508d78e3f7d383, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.96
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ffa7aa4b25b96c8468508d78e3f7d383, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.93
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ffa7aa4b25b96c8468508d78e3f7d383, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ffa7aa4b25b96c8468508d78e3f7d383, type: 3}
       propertyPath: m_LocalRotation.w
@@ -97,12 +98,24 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: ffa7aa4b25b96c8468508d78e3f7d383, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: ffa7aa4b25b96c8468508d78e3f7d383, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 7720fa720ee5f484a98178fe5e8c8a5c, type: 2}
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: ffa7aa4b25b96c8468508d78e3f7d383, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 7f212a52906cad04f91cb4e9deba56e4, type: 2}
+    - target: {fileID: 919132149155446097, guid: ffa7aa4b25b96c8468508d78e3f7d383, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: ffa7aa4b25b96c8468508d78e3f7d383, type: 3}
       propertyPath: m_Name
-      value: Bastoni 1
+      value: Napoletane
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ffa7aa4b25b96c8468508d78e3f7d383, type: 3}

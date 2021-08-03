@@ -32,5 +32,20 @@ namespace com.alvisefavero.briscola
                 return _cardName;
             }
         }
+
+        public GameObject InstantiateObject()
+        {
+
+            Skin skin = SkinManager.Instance.SelectedSkin;
+            GameObject cardObj = Instantiate(skin.CardPrefab);
+            Material[] mats =
+            {
+                skin.GetCardSkin(this),
+                skin.CardBack
+            };
+            cardObj.GetComponent<MeshRenderer>().materials = mats;
+            cardObj.GetComponent<Card>().CardAsset = this;
+            return cardObj;
+        }
     }
 }

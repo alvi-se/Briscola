@@ -1,15 +1,18 @@
 # Briscola
 ## Da fare
-* Gestione "skin" (carte napoletane, trevisane, sarde...)
+* Gestione andamento partita
 * Meccanica principale di gioco
-* Mescolamento mazzo di carte e distribuzione
+* Distribuzione carte
 * Gestione avversario:
     1. Bot che sceglie carta random
     2. Multiplayer
     3. (opzionale) bot che sa giocare
 ## In progresso
-* Caricamento dinamico dei mazzi di carte
+* Gestione mano giocatore
 ## Completato
 * Animazioni carte
 * Gestione copertura e scopertura
 * Selezione carta
+* Gestione "skin" (carte napoletane, trevisane, sarde...)
+* Caricamento dinamico dei mazzi di carte
+* Mescolamento mazzo di carte

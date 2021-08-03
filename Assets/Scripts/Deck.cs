@@ -29,7 +29,7 @@ namespace com.alvisefavero.briscola
                 Fill();
                 if (ShuffleOnAwake) Shuffle();
             }
-            else OnDeckChanged();
+            else UpdateDeck();
         }
 
         public void Shuffle()
@@ -41,7 +41,7 @@ namespace com.alvisefavero.briscola
                 cards[i] = cards[rnd];
                 cards[rnd] = c;
             }
-            OnDeckChanged();
+            UpdateDeck();
         }
 
         public void Fill()
@@ -49,7 +49,7 @@ namespace com.alvisefavero.briscola
             CardAsset[] cardsArray = Resources.LoadAll<CardAsset>(CardsPath);
             MaxSize = cardsArray.Length;
             foreach (CardAsset card in cardsArray) cards.Add(card);
-            OnDeckChanged();
+            UpdateDeck();
         }
 
         public CardAsset Pop()
@@ -57,7 +57,7 @@ namespace com.alvisefavero.briscola
             if (cards.Count <= 0) throw new System.InvalidOperationException("Can't pop on empty deck.");
             CardAsset c = cards[cards.Count - 1];
             cards.RemoveAt(cards.Count - 1);
-            OnDeckChanged();
+            UpdateDeck();
             return c;
         }
 
@@ -78,10 +78,10 @@ namespace com.alvisefavero.briscola
         public void Push(CardAsset card)
         {
             cards.Add(card);
-            OnDeckChanged();
+            UpdateDeck();
         }
 
-        public void OnDeckChanged()
+        public void UpdateDeck()
         {
             if (cards.Count <= 0)
             {
@@ -94,14 +94,21 @@ namespace com.alvisefavero.briscola
                 meshFilter.mesh = skinManager.SelectedSkin.CardModel;
                 Material[] materials = { skinManager.SelectedSkin.GetCardSkin(cards[0]), skinManager.SelectedSkin.CardBack };
                 meshRenderer.materials = materials;
-                transform.localScale = new Vector3(1f, 1f, Mathf.Lerp(1, FullScale, (float) cards.Count / MaxSize));
+                transform.localScale = new Vector3(1f, 1f, Mathf.Lerp(1, FullScale, (float)cards.Count / MaxSize));
                 collider.enabled = true;
             }
         }
 
         public void Interact()
         {
-            Pop();
+            GameObject cardObj = Pop().InstantiateObject();
+            cardObj.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z - 2f);
+            Card c = cardObj.GetComponent<Card>();
+            c.MoveCard(
+                new Vector3(Random.Range(-8f, 8f), Random.Range(-3.5f, 3.5f)),
+                1f,
+                () => c.Covered = false
+            );
         }
     }
 }

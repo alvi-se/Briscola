@@ -1,5 +1,5 @@
-using UnityEngine;
 using System;
+using UnityEngine;
 
 namespace com.alvisefavero.briscola
 {
@@ -11,7 +11,7 @@ namespace com.alvisefavero.briscola
         {
             [SerializeField] private CardAsset _card;
             [SerializeField] private Material _cardFrontFace;
-            
+
             public CardAsset Card
             {
                 get
@@ -31,6 +31,7 @@ namespace com.alvisefavero.briscola
 
         [SerializeField] private Material _cardBack;
         [SerializeField] private Mesh _cardModel;
+        [SerializeField] private GameObject _cardPrefab;
         [SerializeField] private CardLink[] _cardFronts = new CardLink[40];
 
         public Material CardBack
@@ -46,6 +47,14 @@ namespace com.alvisefavero.briscola
             get
             {
                 return _cardModel;
+            }
+        }
+
+        public GameObject CardPrefab
+        {
+            get
+            {
+                return _cardPrefab;
             }
         }
 

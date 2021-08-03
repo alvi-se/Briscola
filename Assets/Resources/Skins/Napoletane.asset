@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _cardBack: {fileID: 2100000, guid: 7f212a52906cad04f91cb4e9deba56e4, type: 2}
   _cardModel: {fileID: -462981019419857548, guid: ffa7aa4b25b96c8468508d78e3f7d383, type: 3}
+  _cardPrefab: {fileID: 1483776495917862771, guid: ad5ff881332d5ad4396429d9d7a6b780, type: 3}
   _cardFronts:
   - _card: {fileID: 11400000, guid: 026974c2702895147a7b6383edbd54ca, type: 2}
     _cardFrontFace: {fileID: 2100000, guid: 604859ee2eb5a5b4fb2978c75f998c08, type: 2}

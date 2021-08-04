@@ -33,7 +33,7 @@ namespace com.alvisefavero.briscola
             }
         }
 
-        public GameObject InstantiateObject()
+        public Card InstantiateObject()
         {
 
             Skin skin = SkinManager.Instance.SelectedSkin;
@@ -44,8 +44,9 @@ namespace com.alvisefavero.briscola
                 skin.CardBack
             };
             cardObj.GetComponent<MeshRenderer>().materials = mats;
-            cardObj.GetComponent<Card>().CardAsset = this;
-            return cardObj;
+            Card c = cardObj.GetComponent<Card>();
+            c.CardAsset = this;
+            return c;
         }
     }
 }

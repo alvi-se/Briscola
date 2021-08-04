@@ -49,20 +49,25 @@ namespace com.alvisefavero.briscola
         public void Interact()
         {
             Covered = false;
+            transform.parent = null;
+            Move(GameManager.Instance.player1PlayPos, 1f);
             Debug.Log("Giocato " + _cardAsset.CardName);
         }
 
         public delegate void OnMovementFinished();
 
-        public void MoveCard(Vector3 position, float time, OnMovementFinished onMovementFinished = null) => StartCoroutine(_moveCard(position, time, onMovementFinished));
+        public void Move(Transform end, float time, OnMovementFinished onMovementFinished = null) => StartCoroutine(_move(end, time, onMovementFinished));
 
-        private IEnumerator _moveCard(Vector3 position, float time, OnMovementFinished onMovementFinished)
+        private IEnumerator _move(Transform end, float time, OnMovementFinished onMovementFinished)
         {
             Vector3 startPosition = transform.position;
+            Quaternion startRotation = transform.rotation;
             float startTime = Time.time;
             while (Time.time < startTime + time)
             {
-                transform.position = Vector3.Lerp(startPosition, position, (Time.time - startTime) / +PlayTimeAnimation);
+                transform.position = Vector3.Lerp(startPosition, end.position, (Time.time - startTime) / time);
+                // FIXME non sembra funzionare la rotazione
+                transform.rotation = Quaternion.Lerp(startRotation, end.rotation, (Time.time - startTime) / time);
                 yield return null;
             }
             if (onMovementFinished != null) onMovementFinished.Invoke();

@@ -17,7 +17,22 @@ namespace com.alvisefavero.briscola
         }
         #endregion
 
+        private void Start()
+        {
+            StartGame();
+        }
+
         public Transform player1PlayPos;
         public Transform player2PlayPos;
+        public Player player;
+        public Deck MainDeck;
+
+        public void StartGame()
+        {
+            MainDeck.Fill();
+            MainDeck.Shuffle();
+            for (int i = 0; i < 3; i++)
+                player.GiveCard(MainDeck.PopAndInstantiate());
+        }
     }
 }

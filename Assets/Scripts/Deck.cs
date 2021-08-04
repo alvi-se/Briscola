@@ -5,6 +5,7 @@ namespace com.alvisefavero.briscola
 {
     public class Deck : MonoBehaviour, IInteractable
     {
+        public Transform ExamplePosition;
         public float FullScale = 200f;
         [Min(0f)] public int MaxSize = 40;
         public string CardsPath = "Cards";
@@ -61,6 +62,13 @@ namespace com.alvisefavero.briscola
             return c;
         }
 
+        public Card PopAndInstantiate()
+        {
+            Card c = Pop().InstantiateObject();
+            c.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z - 2f);
+            return c;
+        }
+
         public bool TryPop(out CardAsset card)
         {
             try
@@ -99,13 +107,12 @@ namespace com.alvisefavero.briscola
             }
         }
 
-        public void Interact()
+            public void Interact()
         {
-            GameObject cardObj = Pop().InstantiateObject();
-            cardObj.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z - 2f);
-            Card c = cardObj.GetComponent<Card>();
-            c.MoveCard(
-                new Vector3(Random.Range(-8f, 8f), Random.Range(-3.5f, 3.5f)),
+            Card c = Pop().InstantiateObject();
+            c.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z - 2f);
+            c.Move(
+                ExamplePosition,
                 1f,
                 () => c.Covered = false
             );

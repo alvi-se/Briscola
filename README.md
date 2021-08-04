@@ -2,13 +2,13 @@
 ## Da fare
 * Gestione andamento partita
 * Meccanica principale di gioco
-* Distribuzione carte
 * Gestione avversario:
     1. Bot che sceglie carta random
     2. Multiplayer
     3. (opzionale) bot che sa giocare
 ## In progresso
 * Gestione mano giocatore
+* Distribuzione carte
 ## Completato
 * Animazioni carte
 * Gestione copertura e scopertura

@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections.Generic;
 
 namespace com.alvisefavero.briscola
 {
@@ -17,22 +18,44 @@ namespace com.alvisefavero.briscola
         }
         #endregion
 
-        private void Start()
-        {
-            StartGame();
-        }
+        public Round CurrentRound { get; private set; }
+        public List<Round> Rounds { get; private set; }
+        public Player CurrentPlayer { get; private set; }
 
-        public Transform player1PlayPos;
-        public Transform player2PlayPos;
-        public Player player;
+        public Transform Player1PlayPos;
+        public Transform Player2PlayPos;
+        public Player[] Players = new Player[2];
         public Deck MainDeck;
 
         public void StartGame()
         {
+            if (Players.Length != 2)
+                throw new System.Exception(); // TODO
             MainDeck.Fill();
             MainDeck.Shuffle();
             for (int i = 0; i < 3; i++)
-                player.GiveCard(MainDeck.PopAndInstantiate());
+                Players[0].GiveCard(MainDeck.PopAndInstantiate());
+            for (int i = 0; i < 3; i++)
+                Players[1].GiveCard(MainDeck.PopAndInstantiate());
+            Rounds = new List<Round>();
+            CurrentRound = new Round();
+            int rdm = Mathf.RoundToInt(Random.Range(0f, 1f));
+            CurrentPlayer = Players[rdm];
+        }
+
+        public void OnRoundEnd()
+        {
+            if (MainDeck.Count <= 0)
+            {
+                EndGame();
+                return;
+            }
+
+        }
+
+        public void EndGame()
+        {
+            // TODO
         }
     }
 }

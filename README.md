@@ -1,12 +1,13 @@
 # Briscola
 ## Da fare
+* Gestione avversario:
+    2. Multiplayer
+    3. (opzionale) bot che sa giocare
+## In progresso
 * Gestione andamento partita
 * Meccanica principale di gioco
 * Gestione avversario:
     1. Bot che sceglie carta random
-    2. Multiplayer
-    3. (opzionale) bot che sa giocare
-## In progresso
 * Gestione mano giocatore
 * Distribuzione carte
 ## Completato

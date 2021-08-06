@@ -50,7 +50,8 @@ namespace com.alvisefavero.briscola
         {
             Covered = false;
             transform.parent = null;
-            Move(GameManager.Instance.player1PlayPos, 1f);
+            // TODO gestione giocata a seconda del giocatore
+            Move(GameManager.Instance.Player1PlayPos, 0.5f);
             Debug.Log("Giocato " + _cardAsset.CardName);
         }
 

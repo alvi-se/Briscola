@@ -33,6 +33,14 @@ namespace com.alvisefavero.briscola
             else UpdateDeck();
         }
 
+        public int Count
+        {
+            get
+            {
+                return cards.Count;
+            }
+        }
+
         public void Shuffle()
         {
             for (int i = 0; i < cards.Count; i++)
@@ -47,6 +55,7 @@ namespace com.alvisefavero.briscola
 
         public void Fill()
         {
+            cards.Clear();
             CardAsset[] cardsArray = Resources.LoadAll<CardAsset>(CardsPath);
             MaxSize = cardsArray.Length;
             foreach (CardAsset card in cardsArray) cards.Add(card);

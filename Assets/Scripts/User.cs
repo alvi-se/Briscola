@@ -8,15 +8,17 @@ namespace com.alvisefavero.briscola
         {
             if (Input.GetMouseButtonDown(0))
             {
+                if (GameManager.Instance.CurrentRound.CurrentPlayer != this) return;
                 Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
                 RaycastHit hit;
                 if (Physics.Raycast(ray, out hit))
                 {
-                    IInteractable interactable = hit.transform.GetComponent<IInteractable>();
-                    if (interactable != null)
-                    {
-                        interactable.Interact();
-                    }
+                    Card c = hit.transform.GetComponent<Card>();
+                    if (c == null ||
+                        hit.transform.parent != Hand
+                    )
+                        return;
+                    PlayCard(c.CardAsset);
                 }
             }
         }

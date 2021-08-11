@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace com.alvisefavero.briscola
 {
-    public class Card : MonoBehaviour, IInteractable
+    public class Card : MonoBehaviour
     {
         [SerializeField] private CardAsset _cardAsset;
         public CardAsset CardAsset
@@ -44,15 +44,6 @@ namespace com.alvisefavero.briscola
         {
             animator = GetComponent<Animator>();
             Covered = CoverOnAwake;
-        }
-
-        public void Interact()
-        {
-            Covered = false;
-            transform.parent = null;
-            // TODO gestione giocata a seconda del giocatore
-            Move(GameManager.Instance.Player1PlayPos, 0.5f);
-            Debug.Log("Giocato " + _cardAsset.CardName);
         }
 
         public delegate void OnMovementFinished();

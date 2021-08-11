@@ -3,9 +3,8 @@ using UnityEngine;
 
 namespace com.alvisefavero.briscola
 {
-    public class Deck : MonoBehaviour, IInteractable
+    public class Deck : MonoBehaviour
     {
-        public Transform ExamplePosition;
         public float FullScale = 200f;
         [Min(0f)] public int MaxSize = 40;
         public string CardsPath = "Cards";
@@ -16,13 +15,11 @@ namespace com.alvisefavero.briscola
         private MeshFilter meshFilter;
         private MeshRenderer meshRenderer;
         private SkinManager skinManager;
-        new private Collider collider;
 
         private void Awake()
         {
             meshFilter = GetComponent<MeshFilter>();
             meshRenderer = GetComponent<MeshRenderer>();
-            collider = GetComponent<Collider>();
             skinManager = SkinManager.Instance;
             cards = new List<CardAsset>();
             if (FillOnAwake)
@@ -104,7 +101,6 @@ namespace com.alvisefavero.briscola
             {
                 meshFilter.mesh = null;
                 transform.localScale = new Vector3(1f, 1f, 1f);
-                collider.enabled = false;
             }
             else
             {
@@ -112,19 +108,7 @@ namespace com.alvisefavero.briscola
                 Material[] materials = { skinManager.SelectedSkin.GetCardSkin(cards[0]), skinManager.SelectedSkin.CardBack };
                 meshRenderer.materials = materials;
                 transform.localScale = new Vector3(1f, 1f, Mathf.Lerp(1, FullScale, (float)cards.Count / MaxSize));
-                collider.enabled = true;
             }
-        }
-
-            public void Interact()
-        {
-            Card c = Pop().InstantiateObject();
-            c.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z - 2f);
-            c.Move(
-                ExamplePosition,
-                1f,
-                () => c.Covered = false
-            );
         }
     }
 }

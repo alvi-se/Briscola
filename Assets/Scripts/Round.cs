@@ -20,6 +20,7 @@ namespace com.alvisefavero.briscola
 
     public enum RoundState
     {
+        PREPARED,
         ONGOING,
         ENDED
     }
@@ -37,14 +38,24 @@ namespace com.alvisefavero.briscola
         public Round(Player startingPlayer, params OnRoundUpdate[] onRoundUpdateCallback)
         {
             Moves = new Move[2];
-            State = RoundState.ONGOING;
+            State = RoundState.PREPARED;
             CurrentPlayer = startingPlayer;
             foreach (OnRoundUpdate onRoundUpdate in onRoundUpdateCallback)
                 OnRoundUpdateCallback += onRoundUpdate;
         }
 
+        public void StartRound()
+        {
+            if (State != RoundState.PREPARED)
+                throw new RoundException(this, "Round already started");
+            State = RoundState.ONGOING;
+            if (OnRoundUpdateCallback != null) OnRoundUpdateCallback.Invoke();
+        }
+
         public void AddMove(Player player, CardAsset cardAsset)
         {
+            if (State != RoundState.ONGOING)
+                throw new RoundException(this, "Round is in state " + State.ToString() + " instead of ONGOING");
             if (player != CurrentPlayer)
                 throw new TurnException(player, player.ToString() + " tried to play but it's not his turn");
                 
@@ -59,10 +70,13 @@ namespace com.alvisefavero.briscola
             else
             {
                 Moves[1] = m;
+                CurrentPlayer = null;
                 State = RoundState.ENDED;
             }
             if (OnRoundUpdateCallback != null)
+            {
                 OnRoundUpdateCallback.Invoke();
+            }
         }
 
         public Player GetWinner()

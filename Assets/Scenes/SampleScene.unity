@@ -224,7 +224,7 @@ MonoBehaviour:
   PlayerDeck: {fileID: 1487029886}
   PlayTime: 0.5
   TurnString: "\xC8 il turno dell'avversario"
-  _hand: {fileID: 522726090}
+  _handTransform: {fileID: 522726090}
 --- !u!4 &52004624
 Transform:
   m_ObjectHideFlags: 0
@@ -342,7 +342,7 @@ MonoBehaviour:
   PlayerDeck: {fileID: 1510995775}
   PlayTime: 0.5
   TurnString: "\xC8 il tuo turno"
-  _hand: {fileID: 444932694}
+  _handTransform: {fileID: 444932694}
 --- !u!4 &493470366
 Transform:
   m_ObjectHideFlags: 0

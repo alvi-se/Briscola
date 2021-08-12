@@ -35,12 +35,13 @@ namespace com.alvisefavero.briscola
             MainDeck.Shuffle();
             for (int i = 0; i < 3; i++)
                 Players[0].GiveCard(MainDeck.PopAndInstantiate(), false);
+
             for (int i = 0; i < 3; i++)
                 Players[1].GiveCard(MainDeck.PopAndInstantiate(), true);
             Rounds = new List<Round>();
             int rdm = Mathf.RoundToInt(Random.Range(0f, 1f));
             CurrentRound = new Round(Players[rdm], OnRoundUpdate, Players[0].OnRoundUpdate, Players[1].OnRoundUpdate);
-            if (CurrentRound.OnRoundUpdateCallback != null) CurrentRound.OnRoundUpdateCallback.Invoke();
+            CurrentRound.StartRound();
             Players[0].enabled = true;
             Players[1].enabled = true;
         }
@@ -76,9 +77,12 @@ namespace com.alvisefavero.briscola
                 EndGame();
                 return;
             }
+            bool winnerCover = winner != Players[0];
+            winner.GiveCard(MainDeck.PopAndInstantiate(), winnerCover);
+            System.Array.Find<Player>(Players, p => p != winner).GiveCard(MainDeck.PopAndInstantiate(), !winnerCover);
             Rounds.Add(CurrentRound);
-            CurrentRound = new Round(CurrentRound.GetWinner(), OnRoundUpdate);
-            
+            CurrentRound = new Round(CurrentRound.GetWinner(), CurrentRound.OnRoundUpdateCallback);
+            CurrentRound.StartRound();
         }
 
         public void EndGame()

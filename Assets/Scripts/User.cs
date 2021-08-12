@@ -15,10 +15,10 @@ namespace com.alvisefavero.briscola
                 {
                     Card c = hit.transform.GetComponent<Card>();
                     if (c == null ||
-                        hit.transform.parent != Hand
+                        hit.transform.parent != HandTransform
                     )
                         return;
-                    PlayCard(c.CardAsset);
+                    PlayCard(c);
                 }
             }
         }

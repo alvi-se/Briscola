@@ -1,4 +1,6 @@
 # Briscola
+Una semplice Briscola fatta con Unity.
+* Versione Unity: 2020.3.12f1
 ## Da fare
 * Gestione avversario:
     2. Multiplayer

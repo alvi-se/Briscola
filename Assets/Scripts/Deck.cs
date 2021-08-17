@@ -1,5 +1,6 @@
-using System.Collections.Generic;
 using UnityEngine;
+using System.Collections;
+using System.Collections.Generic;
 
 namespace com.alvisefavero.briscola
 {
@@ -87,6 +88,14 @@ namespace com.alvisefavero.briscola
                 card = null;
                 return false;
             }
+        }
+
+        public IEnumerator MoveAndPush(Card card)
+        {
+            card.Covered = true;
+            yield return StartCoroutine(card.Move(transform, 0.5f));
+            Push(card.CardAsset);
+            Destroy(card.gameObject);
         }
 
         public void Push(CardAsset card)

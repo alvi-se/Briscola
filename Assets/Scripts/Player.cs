@@ -1,6 +1,7 @@
 using UnityEngine;
 using com.alvisefavero.briscola.exceptions;
 using System;
+using System.Collections;
 
 namespace com.alvisefavero.briscola
 {
@@ -28,7 +29,7 @@ namespace com.alvisefavero.briscola
             gameManager = GameManager.Instance;
         }
 
-        public void GiveCard(Card card, bool covered)
+        public IEnumerator GiveCard(Card card, bool covered)
         {
             card.transform.SetParent(_handTransform);
             for (int i = 0; i < Hand.Length; i++)
@@ -36,13 +37,27 @@ namespace com.alvisefavero.briscola
                 if (Hand[i] == null)
                 {
                     Hand[i] = card;
-                    card.Move(CardsPositions[i], 0.5f, () => card.Covered = covered);
-                    return;
+                    yield return StartCoroutine(card.Move(CardsPositions[i], 0.5f, () => card.Covered = covered));
+                    yield break;
                 }
             }
             throw new TooCardsException("Hand is full");
             // FIXME mettere carta in prima posizione libera
             // card.Move(CardsPositions[_hand.childCount - 1], 0.5f, () => card.Covered = covered);
+        }
+        public void GiveCard(Card card, Card.OnMovementFinished onMovementFinished)
+        {
+            card.transform.SetParent(_handTransform);
+            for (int i = 0; i < Hand.Length; i++)
+            {
+                if (Hand[i] == null)
+                {
+                    Hand[i] = card;
+                    card.Move(CardsPositions[i], 0.5f, onMovementFinished);
+                    return;
+                }
+            }
+            throw new TooCardsException("Hand is full");
         }
 
         public void PlayCard(int n)

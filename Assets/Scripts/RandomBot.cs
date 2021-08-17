@@ -11,7 +11,10 @@ namespace com.alvisefavero.briscola
         {
             base.OnRoundUpdate();
             if (GameManager.Instance.CurrentRound.CurrentPlayer == this)
-                PlayCard(Mathf.RoundToInt(Random.Range(0, 2)));
+                Invoke("_chooseRandomCard", 1f);
+                
         }
+        
+        private void _chooseRandomCard() => PlayCard(Mathf.RoundToInt(Random.Range(0, 2)));
     }
 }

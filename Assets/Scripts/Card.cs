@@ -48,9 +48,9 @@ namespace com.alvisefavero.briscola
 
         public delegate void OnMovementFinished();
 
-        public void Move(Transform end, float time, OnMovementFinished onMovementFinished = null) => StartCoroutine(_move(end, time, onMovementFinished));
+        //public void Move(Transform end, float time, OnMovementFinished onMovementFinished = null) => StartCoroutine(_move(end, time, onMovementFinished));
 
-        private IEnumerator _move(Transform end, float time, OnMovementFinished onMovementFinished)
+        public IEnumerator Move(Transform end, float time, OnMovementFinished onMovementFinished = null)
         {
             Vector3 startPosition = transform.position;
             Quaternion startRotation = transform.rotation;

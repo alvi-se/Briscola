@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 using System.Collections.Generic;
 using com.alvisefavero.briscola.exceptions;
 using UnityEngine.UI;
@@ -21,23 +22,25 @@ namespace com.alvisefavero.briscola
         #endregion
 
         public Round CurrentRound { get; private set; }
+        public Transform BriscolaPosition;
         public Transform RoundContainer;
         public List<Round> Rounds { get; private set; }
         public Player[] Players = new Player[2];
         public Deck MainDeck;
         public Text RoundInfo;
+        public Card Briscola { get; private set; }
 
-        public void StartGame()
+        public void StartGame() => StartCoroutine(_startGame());
+
+        private IEnumerator _startGame()
         {
             if (Players.Length != 2)
                 throw new PlayerNumberException("Players number must be equal to 2");
             MainDeck.Fill();
             MainDeck.Shuffle();
-            for (int i = 0; i < 3; i++)
-                Players[0].GiveCard(MainDeck.PopAndInstantiate(), false);
-
-            for (int i = 0; i < 3; i++)
-                Players[1].GiveCard(MainDeck.PopAndInstantiate(), true);
+            yield return StartCoroutine(GiveCards());
+            Briscola = MainDeck.PopAndInstantiate();
+            yield return StartCoroutine(Briscola.Move(BriscolaPosition, 0.5f, () => Briscola.Covered = false));
             Rounds = new List<Round>();
             int rdm = Mathf.RoundToInt(Random.Range(0f, 1f));
             CurrentRound = new Round(Players[rdm], OnRoundUpdate, Players[0].OnRoundUpdate, Players[1].OnRoundUpdate);
@@ -46,40 +49,48 @@ namespace com.alvisefavero.briscola
             Players[1].enabled = true;
         }
 
+        private IEnumerator GiveCards()
+        {
+            for (int i = 0; i < Players.Length; i++)
+            {
+                for (int j = 0; j < 3; j++)
+                {
+                    Card c = MainDeck.PopAndInstantiate();
+                    yield return StartCoroutine(Players[i].GiveCard(c, i == 0 ? false : true));
+                }
+            }
+        }
+
         public void PlayCard(Player player, Card card)
         {
             card.transform.parent = RoundContainer;
-            card.Move(player.PlayPosition, player.PlayTime, () => card.Covered = false);
-            CurrentRound.AddMove(player, card.CardAsset);
+            card.Covered = false;
+            StartCoroutine(card.Move(player.PlayPosition, player.PlayTime, () => CurrentRound.AddMove(player, card.CardAsset)));
         }
 
         public void OnRoundUpdate()
         {
             if (CurrentRound.State == Round.RoundState.ENDED)
             {
-                OnRoundEnd();
+                StartCoroutine(OnRoundEnd());
                 return;
             }
             RoundInfo.text = CurrentRound.CurrentPlayer.TurnString;
         }
 
-        public void OnRoundEnd()
+        public IEnumerator OnRoundEnd()
         {
+            yield return new WaitForSeconds(1f);
             Player winner = CurrentRound.GetWinner();
             foreach (Card c in RoundContainer.GetComponentsInChildren<Card>())
-            {
-                winner.PlayerDeck.Push(c.CardAsset);
-                c.Move(winner.PlayerDeck.transform, 0.5f, () => Destroy(c.gameObject));
-            }
+                StartCoroutine(winner.PlayerDeck.MoveAndPush(c));
 
-            if (MainDeck.Count <= 0)
-            {
-                EndGame();
-                return;
-            }
+            // TODO controllare se carte sono finite e se la partita è finita
+
             bool winnerCover = winner != Players[0];
-            winner.GiveCard(MainDeck.PopAndInstantiate(), winnerCover);
-            System.Array.Find<Player>(Players, p => p != winner).GiveCard(MainDeck.PopAndInstantiate(), !winnerCover);
+            yield return StartCoroutine(winner.GiveCard(MainDeck.PopAndInstantiate(), winnerCover));
+            Player losingPlayer = System.Array.Find<Player>(Players, p => p != winner);
+            yield return StartCoroutine(losingPlayer.GiveCard(MainDeck.PopAndInstantiate(), !winnerCover));
             Rounds.Add(CurrentRound);
             CurrentRound = new Round(CurrentRound.GetWinner(), CurrentRound.OnRoundUpdateCallback);
             CurrentRound.StartRound();

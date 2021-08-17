@@ -83,10 +83,18 @@ namespace com.alvisefavero.briscola
         {
             if (State == RoundState.ONGOING)
                 throw new RoundException(this, "Can't get winner, round has not ended yet");
-            if (PointsRules.CompareValues(Moves[0].Card.Value, Moves[1].Card.Value))
-                return Moves[0].Player;
-            else
-                return Moves[1].Player;
+            if (Moves[0].Card.Suit == Moves[1].Card.Suit)
+            {
+                if (PointsRules.CompareValues(Moves[0].Card.Value, Moves[1].Card.Value))
+                    return Moves[0].Player;
+                else
+                    return Moves[1].Player;
+            }
+            if (Moves[0].Card.Suit == GameManager.Instance.Briscola.CardAsset.Suit)
+                    return Moves[0].Player;
+            if (Moves[1].Card.Suit == GameManager.Instance.Briscola.CardAsset.Suit)
+                    return Moves[1].Player;
+            return Moves[0].Player;
         }
     }
 }

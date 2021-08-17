@@ -5,14 +5,10 @@ Una semplice Briscola fatta con Unity.
 * Gestione avversario:
     2. Multiplayer
     3. (opzionale) bot che sa giocare
-* Dare delle tempistiche alle animazioni
-* Gestire round a seconda del seme
-* Gestire la carta briscola
 * Conclusione partita
 * Documentare il codice
 ## In progresso
-* Gestione andamento partita
-* Meccanica principale di gioco
+
 ## Completato
 * Animazioni carte
 * Gestione copertura e scopertura
@@ -25,3 +21,8 @@ Una semplice Briscola fatta con Unity.
 * Gestione avversario:
     1. Bot che sceglie carta random
 * Preparazione partita
+* Dare delle tempistiche alle animazioni
+* Gestire round a seconda del seme
+* Gestire la carta briscola
+* Gestione andamento partita
+* Meccanica principale di gioco

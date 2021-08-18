@@ -8,7 +8,8 @@ Una semplice Briscola fatta con Unity.
 * Conclusione partita
 * Documentare il codice
 ## In progresso
-
+* Gestione lingue
+* Cambio skin
 ## Completato
 * Animazioni carte
 * Gestione copertura e scopertura

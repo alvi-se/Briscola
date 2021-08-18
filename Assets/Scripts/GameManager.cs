@@ -13,10 +13,7 @@ namespace com.alvisefavero.briscola
         private void Awake()
         {
             if (Instance != null)
-            {
-                Debug.LogError("More than one instance of GameManager!");
-                return;
-            }
+                throw new SingletonException("More than one instance of GameManager!");
             Instance = this;
         }
         #endregion

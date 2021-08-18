@@ -1,0 +1,8 @@
+{
+    "your_turn": "It's your turn",
+    "player_turn": "It's %PLAYER%'s turn",
+    "you_win_turn": "You win this round",
+    "player_wins_turn": "%PLAYER% wins this round",
+    "you_win_game": "You win",
+    "player_wins_game": "%PLAYER% wins"
+}

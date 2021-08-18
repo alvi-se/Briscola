@@ -226,6 +226,7 @@ MonoBehaviour:
   PlayerDeck: {fileID: 1487029886}
   PlayTime: 0.5
   TurnString: "\xC8 il turno dell'avversario"
+  Name: 
   _handTransform: {fileID: 522726090}
 --- !u!4 &52004624
 Transform:
@@ -374,6 +375,7 @@ MonoBehaviour:
   PlayerDeck: {fileID: 1510995775}
   PlayTime: 0.5
   TurnString: "\xC8 il tuo turno"
+  Name: 
   _handTransform: {fileID: 444932694}
 --- !u!4 &493470366
 Transform:
@@ -727,6 +729,7 @@ GameObject:
   - component: {fileID: 900679557}
   - component: {fileID: 900679556}
   - component: {fileID: 900679555}
+  - component: {fileID: 900679559}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -816,6 +819,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &900679559
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 900679554}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e864c5576c5e55040bcd1fb17d7f8e9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &957825770
 GameObject:
   m_ObjectHideFlags: 0
@@ -1298,7 +1313,7 @@ GameObject:
   - component: {fileID: 1679750191}
   - component: {fileID: 1679750190}
   m_Layer: 5
-  m_Name: Button Play
+  m_Name: BTN Play
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1532,7 +1547,7 @@ GameObject:
   - component: {fileID: 2071780626}
   - component: {fileID: 2071780625}
   m_Layer: 5
-  m_Name: Round Info
+  m_Name: TXT Round Info
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1570,7 +1585,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1

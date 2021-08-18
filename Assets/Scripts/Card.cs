@@ -39,10 +39,12 @@ namespace com.alvisefavero.briscola
         public float PlayTimeAnimation = 1f;
 
         private Animator animator;
+        private AudioSource audioSource;
 
         private void Awake()
         {
             animator = GetComponent<Animator>();
+            audioSource = GetComponent<AudioSource>();
             Covered = CoverOnAwake;
         }
 
@@ -52,6 +54,7 @@ namespace com.alvisefavero.briscola
 
         public IEnumerator Move(Transform end, float time, OnMovementFinished onMovementFinished = null)
         {
+            audioSource.Play();
             Vector3 startPosition = transform.position;
             Quaternion startRotation = transform.rotation;
             float startTime = Time.time;

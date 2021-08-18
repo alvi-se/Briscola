@@ -13,6 +13,7 @@ namespace com.alvisefavero.briscola
         public Deck PlayerDeck;
         public float PlayTime = 0.5f;
         public string TurnString;
+        public string Name;
         private GameManager gameManager;
         [SerializeField] private Transform _handTransform;
 

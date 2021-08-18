@@ -31,13 +31,9 @@ namespace com.alvisefavero.briscola
             else UpdateDeck();
         }
 
-        public int Count
-        {
-            get
-            {
-                return cards.Count;
-            }
-        }
+        public int Count => cards.Count;
+
+        public CardAsset this[int i] => cards[i];
 
         public void Shuffle()
         {

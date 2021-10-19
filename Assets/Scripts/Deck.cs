@@ -86,10 +86,10 @@ namespace com.alvisefavero.briscola
             }
         }
 
-        public IEnumerator MoveAndPush(Card card)
+        public IEnumerator MoveAndPush(Card card, bool playSound = true)
         {
             card.Covered = true;
-            yield return StartCoroutine(card.Move(transform, 0.5f));
+            yield return StartCoroutine(card.Move(transform, 0.5f, playSound: playSound));
             Push(card.CardAsset);
             Destroy(card.gameObject);
         }

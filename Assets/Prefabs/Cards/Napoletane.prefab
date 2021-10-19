@@ -109,7 +109,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!95 &4772914947395807709
+--- !u!95 &9048589686508542556
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 0

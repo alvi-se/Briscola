@@ -1,5 +1,4 @@
 using com.alvisefavero.briscola.exceptions;
-using UnityEngine;
 
 namespace com.alvisefavero.briscola
 {
@@ -18,12 +17,6 @@ namespace com.alvisefavero.briscola
             }
         }
 
-    public enum RoundState
-    {
-        PREPARED,
-        ONGOING,
-        ENDED
-    }
     #endregion
 
         /// <summary>
@@ -31,14 +24,14 @@ namespace com.alvisefavero.briscola
         /// </summary>
         public Move[] Moves { get; private set; }
         public Player CurrentPlayer { get; private set; }
-        public RoundState State { get; private set; }
+        public GameState State { get; private set; }
         public delegate void OnRoundUpdate();
         public OnRoundUpdate OnRoundUpdateCallback { get; private set; }
 
         public Round(Player startingPlayer, params OnRoundUpdate[] onRoundUpdateCallback)
         {
             Moves = new Move[2];
-            State = RoundState.PREPARED;
+            State = GameState.PREPARED;
             CurrentPlayer = startingPlayer;
             foreach (OnRoundUpdate onRoundUpdate in onRoundUpdateCallback)
                 OnRoundUpdateCallback += onRoundUpdate;
@@ -46,15 +39,15 @@ namespace com.alvisefavero.briscola
 
         public void StartRound()
         {
-            if (State != RoundState.PREPARED)
+            if (State != GameState.PREPARED)
                 throw new RoundException(this, "Round already started");
-            State = RoundState.ONGOING;
+            State = GameState.ONGOING;
             if (OnRoundUpdateCallback != null) OnRoundUpdateCallback.Invoke();
         }
 
         public void AddMove(Player player, CardAsset cardAsset)
         {
-            if (State != RoundState.ONGOING)
+            if (State != GameState.ONGOING)
                 throw new RoundException(this, "Round is in state " + State.ToString() + " instead of ONGOING");
             if (player != CurrentPlayer)
                 throw new TurnException(player, player.ToString() + " tried to play but it's not his turn");
@@ -71,7 +64,7 @@ namespace com.alvisefavero.briscola
             {
                 Moves[1] = m;
                 CurrentPlayer = null;
-                State = RoundState.ENDED;
+                State = GameState.ENDED;
             }
             if (OnRoundUpdateCallback != null)
             {
@@ -81,7 +74,7 @@ namespace com.alvisefavero.briscola
 
         public Player GetWinner()
         {
-            if (State == RoundState.ONGOING)
+            if (State == GameState.ONGOING)
                 throw new RoundException(this, "Can't get winner, round has not ended yet");
             if (Moves[0].Card.Suit == Moves[1].Card.Suit)
             {

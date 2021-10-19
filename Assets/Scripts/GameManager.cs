@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using com.alvisefavero.briscola.exceptions;
 using UnityEngine.UI;
+using com.alvisefavero.collections;
 
 namespace com.alvisefavero.briscola
 {
@@ -15,6 +16,11 @@ namespace com.alvisefavero.briscola
             if (Instance != null)
                 throw new SingletonException("More than one instance of GameManager!");
             Instance = this;
+            State = GameState.PREPARED;
+            foreach (Player p in PlayersList)
+            {
+                Debug.Log(p.gameObject.name);
+            }
         }
         #endregion
 
@@ -23,11 +29,18 @@ namespace com.alvisefavero.briscola
         public Transform RoundContainer;
         public List<Round> Rounds { get; private set; }
         public Player[] Players = new Player[2];
+        public CircularListUnity<Player> PlayersList = new CircularListUnity<Player>();
         public Deck MainDeck;
         public Text RoundInfo;
         public Card Briscola { get; private set; }
+        public GameState State { get; private set; }
 
-        public void StartGame() => StartCoroutine(_startGame());
+        public void StartGame()
+        {
+            if (State != GameState.PREPARED)
+                throw new GameException("Game has already started");
+            StartCoroutine(_startGame());
+        }
 
         private IEnumerator _startGame()
         {
@@ -44,6 +57,7 @@ namespace com.alvisefavero.briscola
             CurrentRound.StartRound();
             Players[0].enabled = true;
             Players[1].enabled = true;
+            State = GameState.ONGOING;
         }
 
         private IEnumerator GiveCards()
@@ -67,7 +81,7 @@ namespace com.alvisefavero.briscola
 
         public void OnRoundUpdate()
         {
-            if (CurrentRound.State == Round.RoundState.ENDED)
+            if (CurrentRound.State == GameState.ENDED)
             {
                 StartCoroutine(OnRoundEnd());
                 return;
@@ -81,8 +95,6 @@ namespace com.alvisefavero.briscola
             Player winner = CurrentRound.GetWinner();
             foreach (Card c in RoundContainer.GetComponentsInChildren<Card>())
                 StartCoroutine(winner.PlayerDeck.MoveAndPush(c));
-
-            // TODO controllare se carte sono finite e se la partita è finita
 
             bool winnerCover = winner != Players[0];
             yield return StartCoroutine(winner.GiveCard(MainDeck.PopAndInstantiate(), winnerCover));

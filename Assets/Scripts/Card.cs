@@ -36,7 +36,6 @@ namespace com.alvisefavero.briscola
                 animator.SetBool("Covered", _covered);
             }
         }
-        public float PlayTimeAnimation = 1f;
 
         private Animator animator;
         private AudioSource audioSource;
@@ -50,19 +49,15 @@ namespace com.alvisefavero.briscola
 
         public delegate void OnMovementFinished();
 
-        //public void Move(Transform end, float time, OnMovementFinished onMovementFinished = null) => StartCoroutine(_move(end, time, onMovementFinished));
-
-        public IEnumerator Move(Transform end, float time, OnMovementFinished onMovementFinished = null)
+        public IEnumerator Move(Transform end, float time, OnMovementFinished onMovementFinished = null, bool playSound = true)
         {
-            audioSource.Play();
+            if (playSound) audioSource.Play();
             Vector3 startPosition = transform.position;
             Quaternion startRotation = transform.rotation;
             float startTime = Time.time;
             while (Time.time < startTime + time)
             {
                 transform.position = Vector3.Lerp(startPosition, end.position, (Time.time - startTime) / time);
-                // FIXME non sembra funzionare la rotazione
-                transform.rotation = Quaternion.Lerp(startRotation, end.rotation, (Time.time - startTime) / time);
                 yield return null;
             }
             if (onMovementFinished != null) onMovementFinished.Invoke();
